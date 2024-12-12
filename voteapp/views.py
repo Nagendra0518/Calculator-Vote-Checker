@@ -9,9 +9,9 @@ def votecheck_home(request):
     try:
         age = int(request.POST["txtage"])
         if age > 0 and age < 18:
-            result = "not eligible to cast vote"
+            result = "Not Eligible to vote casting"
         elif age >= 18:
-            result = "eligible for vote casting"
+            result = "Eligible for Vote casting"
         else:
             result = "give proper value"
         return render(request,'votevalidation.html',{"age":age,"res":result})
