@@ -1,5 +1,2 @@
-#!/bin/bash
-echo "Building Django project..."
-python -m pip install -r requirements.txt
-python manage.py collectstatic --noinput
-echo "BUILD END"
+python -r requirements.txt
+python manage.py collectstatic
