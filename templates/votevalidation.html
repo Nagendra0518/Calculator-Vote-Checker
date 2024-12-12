@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #822386;
+    margin: 0;
+    padding: 20px;
+}
+
+.calculator-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px double #000;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input[type="number"], input[type="text"], input[type="submit"] ,button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px double #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+input[type="submit"] {
+    background-color: #007BFD;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.5;
+}
+button {
+    background-color:green;
+    color:white;
+    cursor: pointer;
+    }
+        a{
+        text_decoration:none;
+         color: white;
+         }
+.button {
+            display: inline-block;
+            padding: 10px 150px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px  red;
+        }
+</style>
+</head>
+<body>
+<form method="post" action="readage">
+    {% csrf_token %}
+ <div class="calculator-container">
+     <h1>VOTE VALIDATOR</h1>
+        <table>
+            <tr>
+                <td><input type="number" placeholder="ENTER A PERSON AGE" name="txtage" value="{{ age }}" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="check vote eligibility" name="operation">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="GET THE RESULT" value="{{ res }}"></td>
+            </tr>
+            <tr>
+                <td><a href="/"  class="button">calculator</a></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
