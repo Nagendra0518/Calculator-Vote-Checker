@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def home(request):
-    return render(request,'votevalidation.html')
+    return render(request,'index.html')
 
 
 def votecheck_home(request):
@@ -14,7 +14,7 @@ def votecheck_home(request):
             result = "Eligible for Vote casting"
         else:
             result = "give proper value"
-        return render(request,'votevalidation.html',{"age":age,"res":result})
+        return render(request,'index.html',{"age":age,"res":result})
     except:
         result = "please give integer value"
-        return render(request,'votevalidation.html',{"res":result})
+        return render(request,'index.html',{"res":result})
